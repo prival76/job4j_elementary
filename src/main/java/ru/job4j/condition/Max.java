@@ -14,3 +14,4 @@ public class Max {
         System.out.println("Maximum number: " + result);
     }
 }
+
