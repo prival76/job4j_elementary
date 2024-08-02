@@ -13,8 +13,8 @@ public class Factorial {
             return  result;
         }
         result = 1;
-        for (int num = result; num <= number; num++) {
-            result = result * num;
+        for (int i = result; i <= number; i++) {
+            result = result * i;
         }
         return result;
     }
