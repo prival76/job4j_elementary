@@ -13,7 +13,7 @@ public class Check {
     }
 
     public static void main(String[] args) {
-        boolean[] array = {true, true, true};
+        boolean[] array = {true, false, true, false};
         System.out.println(mono(array));
     }
 }
