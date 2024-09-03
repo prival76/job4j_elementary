@@ -12,9 +12,23 @@ public class FindLoop {
         return result;
     }
 
+    public static int indexInRange(int[] data, int element, int start, int finish) {
+        int result = -1;
+        for (int i = start; i <= finish; i++) {
+            if (data[i] == element) {
+              result = i;
+              break;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
-        int[] arrayOfNumbers = new int[] {0, 2, 5, 7, 9};
-        int element = 9;
+        int[] arrayOfNumbers = new int[] {0, 2, 4, 9, 5};
+        int element = 6;
         System.out.println(indexOf(arrayOfNumbers, element));
+        int start = 1;
+        int finish = 4;
+        System.out.println(indexInRange(arrayOfNumbers, element, start, finish));
     }
 }
