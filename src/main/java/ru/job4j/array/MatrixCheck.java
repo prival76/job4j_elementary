@@ -34,25 +34,23 @@ public class MatrixCheck {
     public static boolean isWin(char[][] board) {
         boolean result = false;
         for (int i = 0; i < board.length; i++) {
-            if (board[i][i] == 'X') {
-                if ((monoVertical(board, i) || monoHorizontal(board, i))) {
+            if (board[i][i] == 'X' && (monoVertical(board, i) || monoHorizontal(board, i))) {
                     result = true;
                     break;
                 }
             }
-        }
         return result;
     }
 
     public static void main(String[] args) {
         char[][] board = {
-                {'X', 'X', ' ', ' ', 'X'},
+                {'X', ' ', 'X', 'X', 'X'},
                 {' ', ' ', ' ', 'X', 'X'},
                 {'X', ' ', 'X', 'X', 'X'},
-                {'X', 'X', ' ', 'X', 'X'},
-                {'X', 'X', ' ', 'X', 'X'}
+                {'X', 'X', ' ', 'X', ' '},
+                {'X', ' ', 'X', 'X', 'X'}
         };
-        int row = 2;
+        int row = 0;
         int column = 4;
         System.out.println(MatrixCheck.monoHorizontal(board, row));
         System.out.println(MatrixCheck.monoVertical(board, column));
